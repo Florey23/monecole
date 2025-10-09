@@ -4,15 +4,178 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Collège</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet" >
-	<link href="css/font-awesome.min.css" rel="stylesheet" >
+	<title>À Propos - LE COLLEGE | École Maternelle, Primaire et Secondaire - Hêvié, Bénin</title>
+	<meta name="description" content="Découvrez l'histoire, la mission et les valeurs du COLLEGE à Hêvié, Hêssa Zone CRS. Établissement d'excellence éducative de la Maternelle à la Terminale au Bénin.">
+	<meta name="keywords" content="école Bénin, collège Hêvié, histoire école, mission éducation, valeurs éducatives, équipe pédagogique">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
 	<link href="css/about.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
 	<script src="js/bootstrap.bundle.min.js"></script>
-
+	<style>
+		:root {
+			--primary-color: #ff6b00;
+			--secondary-color: #003366;
+			--accent-color: #28a745;
+			--light-color: #f8f9fa;
+			--dark-color: #343a40;
+		}
+		
+		.hero-section {
+			background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+			color: white;
+			padding: 80px 0 40px;
+		}
+		
+		.mission-card {
+			background: white;
+			border-radius: 15px;
+			padding: 30px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+			transition: transform 0.3s ease;
+			height: 100%;
+			border-top: 4px solid var(--primary-color);
+		}
+		
+		.mission-card:hover {
+			transform: translateY(-5px);
+		}
+		
+		.value-icon {
+			width: 80px;
+			height: 80px;
+			background: var(--primary-color);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 20px;
+			color: white;
+			font-size: 2rem;
+		}
+		
+		.timeline {
+			position: relative;
+			padding: 40px 0;
+		}
+		
+		.timeline::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 0;
+			bottom: 0;
+			width: 2px;
+			background: var(--primary-color);
+			transform: translateX(-50%);
+		}
+		
+		.timeline-item {
+			margin-bottom: 40px;
+			position: relative;
+		}
+		
+		.timeline-content {
+			background: white;
+			padding: 25px;
+			border-radius: 10px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+			position: relative;
+			width: 45%;
+		}
+		
+		.timeline-item:nth-child(odd) .timeline-content {
+			float: left;
+		}
+		
+		.timeline-item:nth-child(even) .timeline-content {
+			float: right;
+		}
+		
+		.timeline-content::after {
+			content: '';
+			position: absolute;
+			top: 25px;
+			width: 20px;
+			height: 20px;
+			background: var(--primary-color);
+			border-radius: 50%;
+		}
+		
+		.timeline-item:nth-child(odd) .timeline-content::after {
+			right: -10px;
+		}
+		
+		.timeline-item:nth-child(even) .timeline-content::after {
+			left: -10px;
+		}
+		
+		.stats-counter {
+			font-size: 3rem;
+			font-weight: bold;
+			color: var(--primary-color);
+		}
+		
+		.team-card {
+			background: white;
+			border-radius: 15px;
+			overflow: hidden;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+			transition: transform 0.3s ease;
+		}
+		
+		.team-card:hover {
+			transform: translateY(-5px);
+		}
+		
+		.team-img {
+			height: 250px;
+			overflow: hidden;
+		}
+		
+		.team-img img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+		
+		.team-card:hover .team-img img {
+			transform: scale(1.1);
+		}
+		
+		.achievement-badge {
+			display: inline-block;
+			background: var(--primary-color);
+			color: white;
+			padding: 5px 15px;
+			border-radius: 20px;
+			font-size: 0.8rem;
+			font-weight: bold;
+			margin: 5px;
+		}
+		
+		@media (max-width: 768px) {
+			.timeline::before {
+				left: 20px;
+			}
+			
+			.timeline-content {
+				width: calc(100% - 60px);
+				margin-left: 40px;
+			}
+			
+			.timeline-content::after {
+				left: -10px !important;
+			}
+			
+			.stats-counter {
+				font-size: 2rem;
+			}
+		}
+	</style>
 </head>
 <body>
 <section id="top">
@@ -43,14 +206,14 @@
 	    <div class="top_1ril">
 		 <span class="col_oran fs-2 float-start lh-1 me-3"><i class="fa fa-envelope"></i></span>
 		 <h6 class="text-white lh-base">Envoyez un email<br>
-<a class="text-white fw-bold" href="#">info@gmail.com</a></h6>
+<a class="text-white fw-bold" href="#">college@gmail.com</a></h6>
 		</div>
 	   </div>
 	   <div class="col-md-4">
 	    <div class="top_1ril">
 		 <span class="col_oran fs-2 float-start lh-1 me-2"><i class="fa fa-map-marker"></i></span>
 		 <h6 class="text-white lh-base">Adresse<br>
-<a class="text-white fw-bold" href="#">3ème étage Best World</a></h6>
+<a class="text-white fw-bold" href="#">étage Best World</a></h6>
 		</div>
 	   </div>
 	  </div>
@@ -76,7 +239,7 @@
         </li>
 		 
 		<li class="nav-item">
-          <a class="nav-link active" href="about.html">À propos</a>
+          <a class="nav-link" href="about.html">À propos</a>
         </li>
 		
 		<li class="nav-item dropdown">
@@ -90,7 +253,7 @@
         </li>
 
 		<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Blog
           </a>
           <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
@@ -115,7 +278,7 @@
             Pages
           </a>
           <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="pricing.html"><i class="fa fa-chevron-right font_8 me-1 align-middle"></i> Tarifs</a></li>
+            <li><a class="dropdown-item" href="pricing.html"><i class="fa fa-chevron-right font_8 me-1 align-middle"></i> Scolarité</a></li>
             <li><a class="dropdown-item border-0" href="contact.html"><i class="fa fa-chevron-right font_8 me-1 align-middle"></i> Contact</a></li>
           </ul>
         </li>
@@ -146,189 +309,292 @@
   </div>
 </nav>
 </section>
-
-<section id="center" class="p_3 center_o bg_blue">
+<!-- Section Hero À Propos -->
+<section class="hero-section">
    <div class="container-xl">
-      <div class="row center_o1 text-center">
+      <div class="row text-center">
      <div class="col-md-12">
-	   <h1 class="font_60 text-white">À propos de nous</h1>
-	   <h6 class="text-dark mb-0 d-inline-block bg_oran p-3 px-4 rounded_30"><a class="text-white" href="#">Accueil</a> <span class="mx-2 text-white-50">|</span> À propos de nous</h6>
+	   <h1 class="font_60 text-white">Notre Histoire & Notre Mission</h1>
+	   <p class="fs-5 text-light mb-4">Découvrez l'établissement qui forme les leaders de demain depuis plus de 15 ans</p>
+	   <h6 class="text-dark mb-0 d-inline-block bg_oran p-3 px-4 rounded_30">
+		   <a class="text-white" href="index.html">Accueil</a> 
+		   <span class="mx-2 text-white-50">|</span> 
+		   À propos de nous
+	   </h6>
 	 </div>
   </div>
    </div>
-  </section>
+</section>
 
-<section id="overview" class="p_3 bg_light">
+<!-- Section Présentation -->
+<section id="presentation" class="p_3 bg_light">
  <div class="container-xl">
   <div class="row overview_1">
    <div class="col-md-6">
     <div class="overview_1l">
-	 <h2>Aperçu de l'entreprise</h2>
-	 <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiumdod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiumdod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-	 <h5 class="mb-2"><i class="fa fa-long-arrow-right color_1"></i> État d'esprit insurgé</h5>
-	 <h5 class="mb-2"><i class="fa fa-long-arrow-right color_1"></i> Résultats durables</h5>
-	  <h5 class="mb-4"><i class="fa fa-long-arrow-right color_1"></i> Personnes passionnées</h5>
-	  <h6 class="mb-0"><a href="#" class="button">À propos de notre équipe <i class="fa fa-long-arrow-right ms-1"></i></a></h6>
-	</div>
+	 <h2 class="col_oran">Notre Établissement</h2>
+	 <p class="mt-3 fs-5">Fondé en 2009, <strong>LE COLLEGE</strong> à Hêvié, Hêssa Zone CRS s'est imposé comme une référence de l'enseignement d'excellence au Bénin. De la Maternelle à la Terminale, nous accompagnons chaque élève dans son épanouissement intellectuel et personnel.</p>
+	 <p>Notre établissement allie tradition éducative et innovation pédagogique pour offrir un cadre d'apprentissage stimulant, sécurisé et propice à la réussite. Nous croyons fermement que chaque enfant possède un potentiel unique qu'il suffit de révéler.</p>
+	 <h5 class="mb-4"><i class="fa fa-long-arrow-right col_oran"></i> Équipe pédagogique passionnée</h5>
+   <h5 class="mb-2"><i class="fa fa-long-arrow-right col_oran"></i> Pédagogie centrée sur l'élève</h5>
+	 <h5 class="mb-2"><i class="fa fa-long-arrow-right col_oran"></i> Excellence académique durable</h5>
+		 </div>
    </div>
    <div class="col-md-6">
     <div class="overview_1r">
 	  <div class="grid clearfix">
 		  <figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/24.jpg" class="w-100" alt="img25"></a>
+			<a href="#"><img src="img/about-img-5.jpg" class="w-100" alt="Élèves en classe au COLLEGE"></a>
 		  </figure>
 	  </div>
 	</div>
    </div>
   </div>
-  <div class="client_pg1 row mt-4 shadow_box bg-white mx-0 pt-5 pb-5">
+  
+  <!-- Statistiques -->
+  <div class="client_pg1 row mt-5 shadow_box bg-white mx-0 pt-5 pb-5">
    <div class="col-md-3 col-sm-6">
     <div class="client_pg1i text-center">
-	 <h2>885 K</h2>
-	 <h5 class="col_oran mb-0">Clients satisfaits</h5>
+	 <h2 class="stats-counter">1608</h2>
+	 <h5 class="col_oran mb-0">Élèves épanouis</h5>
 	</div>
    </div>
    <div class="col-md-3 col-sm-6">
     <div class="client_pg1i text-center">
-	 <h2>1295 +</h2>
-	 <h5 class="col_oran mb-0">Prix remportés</h5>
+	 <h2 class="stats-counter">46</h2>
+	 <h5 class="col_oran mb-0">Enseignants qualifiés</h5>
 	</div>
    </div>
    <div class="col-md-3 col-sm-6">
     <div class="client_pg1i text-center">
-	 <h2>115 K</h2>
-	 <h5 class="col_oran mb-0">Projets terminés</h5>
+	 <h2 class="stats-counter">98%</h2>
+	 <h5 class="col_oran mb-0">Taux de réussite</h5>
 	</div>
    </div>
    <div class="col-md-3 col-sm-6">
     <div class="client_pg1i text-center">
-	 <h2>1725 +</h2>
-	 <h5 class="col_oran mb-0">Comptes créés</h5>
+	 <h2 class="stats-counter">15</h2>
+	 <h5 class="col_oran mb-0">Ans d'expérience</h5>
 	</div>
    </div>
   </div>
  </div>
 </section>
 
-<section id="price" class="p_3">
+<!-- Section Mission et Valeurs -->
+<section id="mission" class="p_3">
  <div class="container-xl">
    <div class="row course_h1 text-center mb-4">
      <div class="col-md-12">
-	     <h6 class="col_oran fw-bold"><i class="fa fa-graduation-cap me-1"></i> Nos forfaits tarifaires</h6>
-		<h1 class="font_50 mb-0">Nos meilleurs forfaits</h1>
+	     <h6 class="col_oran fw-bold"><i class="fa fa-bullseye me-1"></i> Notre Engagement</h6>
+		<h1 style="font-size: 20px;" class="font_50 mb-0">Mission, Vision & Valeurs</h1>
 	 </div>
    </div>
-	  <div class="price_1 row">
-	   <div class="col-md-4">
-	    <div class="text-center price_1i pt-4 pb-4">
-		 <h4>BASIQUE</h4>
-		<h2 class="p-3"><span class="fs-6">$</span> <span class="col_oran font_50">45</span>  <span class="font_14"> / An</span></h2>
-		<h6 class="fs-6"><a href="#">12 projets</a></h6>
-		<h6 class="fs-6"><a href="#">5 GB Stockage</a></h6>
-		<h6 class="fs-6"><a href="#">5 Marketing email</a></h6>
-		<h6 class="fs-6"><a href="#">10 Bases de données</a></h6>
-		<h6 class="fs-6"><a href="#">10 GB Bande passante</a></h6>
-		<h6 class="fs-6"><a href="#">Main libre</a></h6>
-		<h5 class="mb-0 fs-6 mt-4"><a class="button" href="#">ACHETER</a></h5>
-		</div>
-	   </div>
-	   <div class="col-md-4">
-	    <div class="text-center price_1i bg pt-4 pb-4">
-		 <h4 class="mgt">STARTER</h4>
-		<h2 class="p-3"><span class="fs-6">$</span> <span class="col_oran font_50">55</span>  <span class="font_14"> / An</span></h2>
-		<h6 class="fs-6"><a href="#">12 projets</a></h6>
-		<h6 class="fs-6"><a href="#">5 GB Stockage</a></h6>
-		<h6 class="fs-6"><a href="#">5 Marketing email</a></h6>
-		<h6 class="fs-6"><a href="#">10 Bases de données</a></h6>
-		<h6 class="fs-6"><a href="#">10 GB Bande passante</a></h6>
-		<h6 class="fs-6"><a href="#">Main libre</a></h6>
-		<h5 class="mb-0 fs-6 mt-4"><a class="button" href="#">ACHETER</a></h5>
-		</div>
-	   </div>
-	   <div class="col-md-4">
-	    <div class="text-center price_1i pt-4 pb-4">
-		 <h4 class="mgt">BUSINESS</h4>
-		<h2 class="p-3"><span class="fs-6">$</span> <span class="col_oran font_50">65</span>  <span class="font_14"> / An</span></h2>
-		<h6 class="fs-6"><a href="#">12 projets</a></h6>
-		<h6 class="fs-6"><a href="#">5 GB Stockage</a></h6>
-		<h6 class="fs-6"><a href="#">5 Marketing email</a></h6>
-		<h6 class="fs-6"><a href="#">10 Bases de données</a></h6>
-		<h6 class="fs-6"><a href="#">10 GB Bande passante</a></h6>
-		<h6 class="fs-6"><a href="#">Main libre</a></h6>
-		<h5 class="mb-0 fs-6 mt-4"><a class="button" href="#">ACHETER</a></h5>
-		</div>
-	   </div>
-	  </div>
+   
+   <div class="row">
+     <div class="col-md-4 mb-4">
+       <div class="mission-card">
+         <div class="value-icon">
+           <i class="fa fa-graduation-cap"></i>
+         </div>
+         <h4 class="text-center">Notre Mission</h4>
+         <p style="text-align: justify;">Offrir une éducation de qualité qui forme des citoyens éclairés, autonomes et responsables, fiers de leur héritage culturel et ouverts sur le monde.</p>
+       </div>
+     </div>
+     <div class="col-md-4 mb-4">
+       <div class="mission-card">
+         <div class="value-icon">
+           <i class="fa fa-eye"></i>
+         </div>
+         <h4 class="text-center">Notre Vision</h4>
+         <p style="text-align: justify;">Devenir le modèle d'excellence éducative au Bénin, formant les leaders de demain grâce à une pédagogie innovante et des valeurs humaines solides.</p>
+       </div>
+     </div>
+     <div class="col-md-4 mb-4">
+       <div class="mission-card">
+         <div class="value-icon">
+           <i class="fa fa-heart"></i>
+         </div>
+         <h4 class="text-center">Nos Valeurs</h4>
+         <p style="text-align: justify;">Excellence, Intégrité, Respect, Innovation et Solidarité sont les piliers qui guident chaque action de notre communauté éducative.</p>
+       </div>
+     </div>
+   </div>
  </div>
 </section>
 
-<section id="feature" class="bg_blue">
- <div class="container-fluid">
-    <div class="feature_1 row">
-	 <div class="col-md-6">
-	  <div class="feature_1l">
-	   <h1 class="font_50 text-white">Nos meilleures fonctionnalités</h1>
-	   <p class="col_light mb-0">Des vêtements de mariage spéciaux sont souvent portés, et la cérémonie est parfois suivie d'une réception de mariage. Musique, poésie.</p>
-	   <div class="feature_1li row mt-4">
-	    <div class="col-md-2 col-sm-2">
-		 <div class="feature_1lil">
-		  <span class="d-inline-block rounded-circle text-center bg_oran text-white fs-2"><i class="fa fa-users"></i></span>
-		 </div>
-		</div>
-		<div class="col-md-10 col-sm-10">
-		 <div class="feature_1lir">
-		  <h3 class="text-white">Enseignants qualifiés</h3>
-		  <p class="col_light mb-0">Des vêtements de mariage spéciaux sont souvent portés, et la cérémonie est parfois suivie d'une réception de mariage. Musique, poésie, prières ou lectures.</p>
-		 </div>
-		</div>
-	   </div>
-	   <div class="feature_1li row mt-4">
-	    <div class="col-md-2  col-sm-2">
-		 <div class="feature_1lil">
-		  <span class="d-inline-block rounded-circle text-center bg_oran text-white fs-2"><i class="fa fa-file"></i></span>
-		 </div>
-		</div>
-		<div class="col-md-10  col-sm-10">
-		 <div class="feature_1lir">
-		  <h3 class="text-white">Cours abordables</h3>
-		  <p class="col_light mb-0">Des vêtements de mariage spéciaux sont souvent portés, et la cérémonie est parfois suivie d'une réception de mariage. Musique, poésie, prières ou lectures.</p>
-		 </div>
-		</div>
-	   </div>
-	   <div class="feature_1li row mt-4">
-	    <div class="col-md-2  col-sm-2">
-		 <div class="feature_1lil">
-		  <span class="d-inline-block rounded-circle text-center bg_oran text-white fs-2"><i class="fa fa-joomla"></i></span>
-		 </div>
-		</div>
-		<div class="col-md-10  col-sm-10">
-		 <div class="feature_1lir">
-		  <h3 class="text-white">Efficace et flexible</h3>
-		  <p class="col_light mb-0">Des vêtements de mariage spéciaux sont souvent portés, et la cérémonie est parfois suivie d'une réception de mariage. Musique, poésie, prières ou lectures.</p>
-		 </div>
-		</div>
-	   </div>
-	  </div>
+<!-- Section Histoire -->
+<section id="histoire" class="p_3 bg_light">
+ <div class="container-xl">
+   <div class="row course_h1 text-center mb-4">
+     <div class="col-md-12">
+	     <h6 class="col_oran fw-bold"><i class="fa fa-history me-1"></i> Notre Parcours</h6>
+		<h1 class="font_50 mb-0"></h1>
 	 </div>
-	 <div class="col-md-6 px-0">
-	  <div class="feature_1r">
-	    <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-					<a href="#"><img src="img/12.jpg" class="w-100" alt="abc"></a>
-				  </figure>
-			  </div>
-	  </div>
-	 </div>
-	</div>
+   </div>
+   
+   <div class="timeline">
+     <div class="timeline-item">
+       <div class="timeline-content">
+         <h4 class="col_oran">2009</h4>
+         <h5>Fondation du COLLEGE</h5>
+         <p>Création de l'établissement avec 3 classes de maternelle et 50 élèves. Début d'une aventure éducative prometteuse à Hêvié.</p>
+       </div>
+     </div>
+     <div class="timeline-item">
+       <div class="timeline-content">
+         <h4 class="col_oran">2012</h4>
+         <h>Ouverture du Primaire</h5>
+         <p>Extension des cycles avec l'ouverture des classes de primaire. L'établissement compte désormais 200 élèves.</p>
+       </div>
+     </div>
+     <div class="timeline-item">
+       <div class="timeline-content">
+         <h4 class="col_oran">2015</h4>
+         <h5>Lancement du Secondaire</h5>
+         <p>Début des classes de secondaire. Premier groupe d'élèves préparé aux examens nationaux.</p>
+       </div>
+     </div>
+     <div class="timeline-item">
+       <div class="timeline-content">
+         <h4 class="col_oran">2020</h4>
+         <h5>Modernisation des Infrastructures</h5>
+         <p>Rénovation complète des bâtiments et équipement des laboratoires scientifiques et informatiques.</p>
+       </div>
+     </div>
+     <div class="timeline-item">
+       <div class="timeline-content">
+         <h4 class="col_oran">2024</h4>
+         <h5>Excellence Reconnue</h5>
+         <p>98% de réussite au baccalauréat. Plus de 1600 élèves inscrits et reconnaissance régionale de la qualité de notre enseignement.</p>
+       </div>
+     </div>
+   </div>
+   <div class="clearfix"></div>
  </div>
 </section>
 
+<!-- Section Équipe Pédagogique -->
+<section id="equipe" class="p_3">
+ <div class="container-xl">
+   <div class="row course_h1 text-center mb-4">
+     <div class="col-md-12">
+	     <h6 class="col_oran fw-bold"><i class="fa fa-users me-1"></i> Notre Équipe</h6>
+		<h1 class="font_50 mb-0">Rencontrez Nos Enseignants</h1>
+	 </div>
+   </div>
+   
+   <div class="row">
+     <div class="col-md-4 mb-4">
+       <div class="team-card">
+         <div class="team-img">
+           <img src="img/teacher1.jpg" alt="Directeur LE COLLEGE">
+         </div>
+         <div class="team-info p-4">
+           <h5>M. Koffi Adéwalé</h5>
+           <p class="text-muted">Directeur Fondateur</p>
+           <p>25 ans d'expérience dans l'éducation, passionné par la formation des jeunes générations.</p>
+           <div class="achievement-badge">Fondateur</div>
+           <div class="achievement-badge">25 ans d'expérience</div>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-4 mb-4">
+       <div class="team-card">
+         <div class="team-img">
+           <img src="img/teacher2.jpg" alt="Professeure de Français">
+         </div>
+         <div class="team-info p-4">
+           <h5>Mme. Akossiwa Gbedo</h5>
+           <p class="text-muted">Professeure de Français</p>
+           <p>Spécialiste de la littérature africaine, elle transmet sa passion pour la langue française.</p>
+           <div class="achievement-badge">Littérature</div>
+           <div class="achievement-badge">15 ans d'expérience</div>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-4 mb-4">
+       <div class="team-card">
+         <div class="team-img">
+           <img src="img/teacher3.jpg" alt="Professeur de Sciences">
+         </div>
+         <div class="team-info p-4">
+           <h5>M. Jean Akpako</h5>
+           <p class="text-muted">Professeur de Sciences</p>
+           <p>Docteur en Physique, il rend les sciences accessibles et passionnantes pour tous.</p>
+           <div class="achievement-badge">Docteur en Physique</div>
+           <div class="achievement-badge">Innovation</div>
+         </div>
+       </div>
+     </div>
+   </div>
+   
+   <div class="row mt-4">
+     <div class="col-md-12 text-center">
+       <a href="equipe.html" class="button">Voir Toute l'Équipe <i class="fa fa-long-arrow-right ms-1"></i></a>
+     </div>
+   </div>
+ </div>
+</section>
+
+<!-- Section Installations -->
+<section id="installations" class="p_3 bg_light">
+ <div class="container-xl">
+   <div class="row course_h1 text-center mb-4">
+     <div class="col-md-12">
+	     <h6 class="col_oran fw-bold"><i class="fa fa-building me-1"></i> Nos Installations</h6>
+		<h1 class="font_50 mb-0">Un Environnement d'Apprentissage Moderne</h1>
+	 </div>
+   </div>
+   
+   <div class="row">
+     <div class="col-md-6 mb-4">
+       <div class="mission-card">
+         <div class="value-icon">
+           <i class="fa fa-flask"></i>
+         </div>
+         <h4 class="text-center">Laboratoires Scientifiques</h4>
+         <p class="text-center">Laboratoires de physique, chimie et biologie équipés pour des expériences pratiques et sécurisées.</p>
+       </div>
+     </div>
+     <div class="col-md-6 mb-4">
+       <div class="mission-card">
+         <div class="value-icon">
+           <i class="fa fa-desktop"></i>
+         </div>
+         <h4 class="text-center">Salle Informatique</h4>
+         <p class="text-center">Équipement informatique moderne avec connexion haut débit pour l'apprentissage du numérique.</p>
+       </div>
+     </div>
+     <div class="col-md-6 mb-4">
+       <div class="mission-card">
+         <div class="value-icon">
+           <i class="fa fa-book"></i>
+         </div>
+         <h4 class="text-center">Bibliothèque</h4>
+         <p class="text-center">Espace de lecture et de recherche avec plus de 5000 ouvrages et ressources pédagogiques.</p>
+       </div>
+     </div>
+     <div class="col-md-6 mb-4">
+       <div class="mission-card">
+         <div class="value-icon">
+           <i class="fa fa-futbol-o"></i>
+         </div>
+         <h4 class="text-center">Infrastructures Sportives</h4>
+         <p class="text-center">Terrain de football, basket, volley et espace pour l'éducation physique et sportive.</p>
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
+
+<!-- Section Témoignages -->
 <section id="testim" class="p_3 carousel_p">
  <div class="container-xl">
     <div class="row course_h1 text-center mb-4">
      <div class="col-md-12">
 	     <h6 class="col_oran fw-bold"><i class="fa fa-graduation-cap me-1"></i> Témoignages</h6>
-		<h1 class="font_50 mb-0">Ce que disent nos clients</h1>
+		<h1 class="font_50 mb-0">Ce Que Disent Les Parents</h1>
 	 </div>
    </div>
     <div class="testim_1 row">
@@ -344,28 +610,28 @@
 	    <div class="col-md-4">
 		 <div class="testim_1i1 bg_light p-4 border_1 text-center">
 		  <span class="lh-1 font_60 col_oran"><i class="fa fa-quote-right"></i></span>
-		  <p class="mt-3">Curabitur ac tortor ante. Sed quis iaculis risus. Ut ultrices ligula aliquet odio tristique euismod. Donec efficitur dolor in turpis aliquet, at mollis.</p>
-		  <img src="img/21.jpg" alt="abc" class="rounded-circle">
-		  <h5 class="mt-3">Eget Porta</h5>
-		  <h6 class="mb-0 text-muted">Développeur Web</h6>
+		  <p class="mt-3">"Mon fils a intégré LE COLLEGE en maternelle et aujourd'hui il est en terminale. L'encadrement et la qualité de l'enseignement sont exceptionnels. Je recommande vivement cette école !"</p>
+		  <img src="img/parent1.jpg" alt="Parent d'élève LE COLLEGE" class="rounded-circle">
+		  <h5 class="mt-3">M. Koffi Adjamonsi</h5>
+		  <h6 class="mb-0 text-muted">Parent d'élève</h6>
 		 </div> 
 		</div>
 		<div class="col-md-4">
 		 <div class="testim_1i1 bg_light p-4 border_1 text-center">
 		  <span class="lh-1 font_60 col_oran"><i class="fa fa-quote-right"></i></span>
-		  <p class="mt-3">Curabitur ac tortor ante. Sed quis iaculis risus. Ut ultrices ligula aliquet odio tristique euismod. Donec efficitur dolor in turpis aliquet, at mollis.</p>
-		  <img src="img/22.jpg" alt="abc" class="rounded-circle">
-		  <h5 class="mt-3">Nulla Quis</h5>
-		  <h6 class="mb-0 text-muted">Développeur Web</h6>
+		  <p class="mt-3">"Les enseignants sont très dévoués et l'ambiance à l'école est excellente. Mes deux enfants sont scolarisés ici et leur progression est remarquable."</p>
+		  <img src="img/parent2.jpg" alt="Parent d'élève LE COLLEGE" class="rounded-circle">
+		  <h5 class="mt-3">Mme. Akossiwa Gbedo</h5>
+		  <h6 class="mb-0 text-muted">Parent d'élève</h6>
 		 </div> 
 		</div>
 		<div class="col-md-4">
 		 <div class="testim_1i1 bg_light p-4 border_1 text-center">
 		  <span class="lh-1 font_60 col_oran"><i class="fa fa-quote-right"></i></span>
-		  <p class="mt-3">Curabitur ac tortor ante. Sed quis iaculis risus. Ut ultrices ligula aliquet odio tristique euismod. Donec efficitur dolor in turpis aliquet, at mollis.</p>
-		  <img src="img/23.jpg" alt="abc" class="rounded-circle">
-		  <h5 class="mt-3">Lorem Amet</h5>
-		  <h6 class="mb-0 text-muted">Développeur Web</h6>
+		  <p class="mt-3">"J'ai passé toute ma scolarité au COLLEGE. Les bases solides acquises ici m'ont permis d'intégrer facilement l'université. Merci à toute l'équipe pédagogique !"</p>
+		  <img src="img/ancien-eleve.jpg" alt="Ancien élève LE COLLEGE" class="rounded-circle">
+		  <h5 class="mt-3">Yao Sènam</h5>
+		  <h6 class="mb-0 text-muted">Ancien élève</h6>
 		 </div> 
 		</div>
 	   </div>
@@ -375,28 +641,28 @@
 	    <div class="col-md-4">
 		 <div class="testim_1i1 bg_light p-4 border_1 text-center">
 		  <span class="lh-1 font_60 col_oran"><i class="fa fa-quote-right"></i></span>
-		  <p class="mt-3">Curabitur ac tortor ante. Sed quis iaculis risus. Ut ultrices ligula aliquet odio tristique euismod. Donec efficitur dolor in turpis aliquet, at mollis.</p>
-		  <img src="img/21.jpg" alt="abc" class="rounded-circle">
-		  <h5 class="mt-3">Eget Porta</h5>
-		  <h6 class="mb-0 text-muted">Développeur Web</h6>
+		  <p class="mt-3">"L'équipe enseignante est très professionnelle et à l'écoute. Les activités parascolaires permettent aux enfants de s'épanouir pleinement."</p>
+		  <img src="img/parent3.jpg" alt="Parent d'élève LE COLLEGE" class="rounded-circle">
+		  <h5 class="mt-3">M. Didier Hounkpe</h5>
+		  <h6 class="mb-0 text-muted">Parent d'élève</h6>
 		 </div> 
 		</div>
 		<div class="col-md-4">
 		 <div class="testim_1i1 bg_light p-4 border_1 text-center">
 		  <span class="lh-1 font_60 col_oran"><i class="fa fa-quote-right"></i></span>
-		  <p class="mt-3">Curabitur ac tortor ante. Sed quis iaculis risus. Ut ultrices ligula aliquet odio tristique euismod. Donec efficitur dolor in turpis aliquet, at mollis.</p>
-		  <img src="img/22.jpg" alt="abc" class="rounded-circle">
-		  <h5 class="mt-3">Nulla Quis</h5>
-		  <h6 class="mb-0 text-muted">Développeur Web</h6>
+		  <p class="mt-3">"La direction est très accessible et les projets pédagogiques sont innovants. Une école qui prépare vraiment nos enfants pour l'avenir."</p>
+		  <img src="img/parent4.jpg" alt="Parent d'élève LE COLLEGE" class="rounded-circle">
+		  <h5 class="mt-3">Mme. Carine Zannou</h5>
+		  <h6 class="mb-0 text-muted">Parent d'élève</h6>
 		 </div> 
 		</div>
 		<div class="col-md-4">
 		 <div class="testim_1i1 bg_light p-4 border_1 text-center">
 		  <span class="lh-1 font_60 col_oran"><i class="fa fa-quote-right"></i></span>
-		  <p class="mt-3">Curabitur ac tortor ante. Sed quis iaculis risus. Ut ultrices ligula aliquet odio tristique euismod. Donec efficitur dolor in turpis aliquet, at mollis.</p>
-		  <img src="img/23.jpg" alt="abc" class="rounded-circle">
-		  <h5 class="mt-3">Lorem Amet</h5>
-		  <h6 class="mb-0 text-muted">Développeur Web</h6>
+		  <p class="mt-3">"Les valeurs enseignées au COLLEGE vont au-delà des apprentissages académiques. Mon enfant y a développé une belle confiance en lui."</p>
+		  <img src="img/parent5.jpg" alt="Parent d'élève LE COLLEGE" class="rounded-circle">
+		  <h5 class="mt-3">M. Jean Akpako</h5>
+		  <h6 class="mb-0 text-muted">Parent d'élève</h6>
 		 </div> 
 		</div>
 	   </div>
@@ -408,154 +674,140 @@
  </div>
 </section>
 
+<!-- Section CTA -->
 <section id="subs_o" class="pt-5 pb-5 bg_blue">
  <div class="container-xl">
    <div class="subs_o1 row">
     <div class="col-md-7">
 	 <div class="subs_o1l">
-	  <h1 class="text-white"><i class="fa fa-ticket me-1"></i> Abonnez-vous à notre newsletter <br> <span class="fs-6 fw-normal">Gérez votre entreprise avec notre logiciel</span></h1>
-
+	  <h1 class="text-white"><i class="fa fa-graduation-cap me-1"></i> Prêt à Nous Rejoindre ?</h1>
+	  <p class="text-light mt-3">Inscrivez votre enfant et offrez-lui une éducation d'excellence qui le préparera aux défis de demain.</p>
 	 </div>
 	</div>
 	<div class="col-md-5">
-	 <div class="subs_o1r">
-	   <div class="input-group p-2 bg-white rounded-3">
-				<input type="text" class="form-control border-0 rounded-0" placeholder="Adresse email...">
-				<span class="input-group-btn">
-					<button class="btn btn-primary bg_blue border-0 rounded-3" type="button">
-						S'abonner maintenant </button>
-				</span>
-		</div>
+	 <div class="subs_o1r text-end">
+	   <h6 class="mb-0"><a class="button" href="admissions.html">Procédure d'Admission <i class="fa fa-long-arrow-right ms-1"></i></a></h6>
 	 </div>
 	</div>
    </div>
  </div>
 </section>
 
-<section id="footer" class="p_3 bg_dark">
- <div class="container-xl">
-   <div class="footer_1 row">
-     <div class="col-md-4">
-	  <div class="footer_1i">
-	   <h3 class="text-white">À propos de nous</h3>
-	   <hr class="line mb-4">
-	   <p class="col_light">Suspendisse non sem ante. Cras pretium gravida leo a convallis. Nam malesuada interdum metus, sit amet dictum ante congue eu. Maecenas ut maximus enim.</p>
-	   <ul class="social-network social-circle mb-0">
-					<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-pinterest"></i></a></li>
-					<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-					<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-dribbble"></i></a></li>
-				</ul>
-	  </div>
-	 </div>
-	 <div class="col-md-2">
-	  <div class="footer_1i">
-	   <h3 class="text-white">Nos liens</h3>
-	   <hr class="line mb-4">
-	   <div class="row footer_1ism">
-		 <h6 class="fw-normal col-md-12 col-6"><a class="col_light" href="#"> Accueil</a></h6>
-	 <h6 class="fw-normal mt-2 col-md-12 col-6"><a class="col_light" href="#"> À propos</a></h6>
-	 <h6 class="fw-normal mt-2 col-md-12 col-6"><a class="col_light" href="#"> Cours</a></h6>
-	 <h6 class="fw-normal mt-2 col-md-12 col-6"><a class="col_light" href="#"> Contactez-nous</a></h6>
-	 <h6 class="fw-normal mt-2 col-md-12 col-6"><a class="col_light" href="#"> Blog</a></h6>
-	 <h6 class="fw-normal mt-2 col-md-12 col-6 mb-0"><a class="col_light" href="#"> Services</a></h6>
-	    </div>
-	  </div>
-	 </div>
-	 <div class="col-md-3">
-	  <div class="footer_1i">
-	   <h3 class="text-white">Nos articles</h3>
-	   <hr class="line mb-4">
-	   <div class="row footer_1i1">
-		     <div class="col-md-3 col-3 pe-0">
-			  <div class="footer_1i1l">
-			    <figure class="effect-jazz mb-0">
-					<a href="#"><img src="img/21.jpg" class="w-100" alt="abc"></a>
-				  </figure>
-			  </div>
-			 </div>
-			 <div class="col-md-9 col-9">
-			  <div class="footer_1i1r">
-			   <p class="mb-1"><a class="col_light" href="#">Rien n'est impossible avec du travail acharné</a></p>
-			   <h6 class="col_oran mb-0">8 mai 2020</h6>
-			  </div>
-			 </div>
-	    </div><hr class="hr_1">
-		<div class="row footer_1i1">
-		     <div class="col-md-3 col-3 pe-0">
-			  <div class="footer_1i1l">
-			    <figure class="effect-jazz mb-0">
-					<a href="#"><img src="img/22.jpg" class="w-100" alt="abc"></a>
-				  </figure>
-			  </div>
-			 </div>
-			 <div class="col-md-9 col-9">
-			  <div class="footer_1i1r">
-			   <p class="mb-1"><a class="col_light" href="#">Rien n'est impossible avec du travail acharné</a></p>
-			   <h6 class="col_oran mb-0">8 mai 2020</h6>
-			  </div>
-			 </div>
-	    </div>
-	  </div>
-	 </div>
-	 <div class="col-md-3">
-	  <div class="footer_1i">
-	   <h3 class="text-white">Contactez-nous</h3>
-	   <hr class="line mb-4">
-	   <div class="footer_1riri row">
-			 <div class="col-md-2 col-2">
-			  <div class="footer_1riril">
-			   <span class="bg_oran text-white rounded-circle d-inline-block text-center"><i class="fa fa-phone"></i></span>
-			  </div>
-			 </div>
-			 <div class="col-md-10 col-10">
-			  <div class="footer_1ririr">
-			   <h6 class="mb-0  lh-base"><a class="col_light" href="#">+(123) 456-7890</a><br>
-<a class="col_light" href="#">+(123) 456-7890</a></h6>
-			  </div>
-			 </div>
-			</div><hr class="hr_1">
-			<div class="footer_1riri row">
-			 <div class="col-md-2 col-2">
-			  <div class="footer_1riril">
-			   <span class="bg_oran text-white rounded-circle d-inline-block text-center"><i class="fa fa-envelope"></i></span>
-			  </div>
-			 </div>
-			 <div class="col-md-10 col-10">
-			  <div class="footer_1ririr">
-			   <h6 class="mb-0  lh-base"><a class="col_light" href="#">info@gmail.com</a><br>
-<a class="col_light" href="#">info@gmail.com</a></h6>
-			  </div>
-			 </div>
-			</div><hr class="hr_1">
-			<div class="footer_1riri row">
-			 <div class="col-md-2 col-2">
-			  <div class="footer_1riril">
-			   <span class="bg_oran text-white rounded-circle d-inline-block text-center"><i class="fa fa-map-marker"></i></span>
-			  </div>
-			 </div>
-			 <div class="col-md-10 col-10">
-			  <div class="footer_1ririr">
-			   <h6 class="mb-0 col_light lh-base">42, Rue Lorem<br>
-3ème étage, Oldyork, USA 11003</h6>
-			  </div>
-			 </div>
-			</div>
-	  </div>
-	 </div>
-   </div>
- </div>
-</section>
+    <!-- Footer -->
+    <section id="footer" class="p_3 bg_dark">
+     <div class="container-xl">
+       <div class="footer_1 row">
+         <div class="col-md-4">
+          <div class="footer_1i">
+           <h3 class="text-white">À propos de nous</h3>
+           <hr class="line mb-4">
+           <p class="col_light">LE COLLEGE à Hêvié, Hêssa Zone CRS est un établissement d'enseignement de qualité de la Maternelle à la Terminale. Nous nous engageons à former des citoyens éclairés, autonomes et fiers de leur héritage culturel béninois.</p>
+           <ul class="social-network social-circle mb-0">
+            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#" class="icoYoutube" title="YouTube"><i class="fa fa-youtube"></i></a></li>
+           </ul>
+          </div>
+         </div>
+         <div class="col-md-3">
+          <div class="footer_1i">
+           <h3 class="text-white"></h3>
+           <hr class="line mb-4">
+           <div class="row footer_1i1">
+                 <div class="col-md-3 col-3 pe-0">
+              <div class="footer_1i1l">
+                <figure class="effect-jazz mb-0">
+                    <a href="#"><img src="img/21.jpg" class="w-100" alt="Cérémonie de remise des diplômes"></a>
+                  </figure>
+              </div>
+             </div>
+             <div class="col-md-9 col-9">
+              <div class="footer_1i1r">
+               <p class="mb-1"><a class="col_light" href="#">Cérémonie de remise des diplômes 2024</a></p>
+               <h6 class="col_oran mb-0">15 juillet 2024</h6>
+              </div>
+             </div>
+            </div><hr class="hr_1">
+        <div class="row footer_1i1">
+                 <div class="col-md-3 col-3 pe-0">
+              <div class="footer_1i1l">
+                <figure class="effect-jazz mb-0">
+                    <a href="#"><img src="img/22.jpg" class="w-100" alt="Journée portes ouvertes"></a>
+                  </figure>
+              </div>
+             </div>
+             <div class="col-md-9 col-9">
+              <div class="footer_1i1r">
+               <p class="mb-1"><a class="col_light" href="#">Journée portes ouvertes - Samedi 25 mai</a></p>
+               <h6 class="col_oran mb-0">8 mai 2024</h6>
+              </div>
+             </div>
+            </div>
+          </div>
+         </div>
+         <div class="col-md-3">
+          <div class="footer_1i">
+           <h3 class="text-white">Contactez-nous</h3>
+           <hr class="line mb-4">
+           <div class="footer_1riri row">
+             <div class="col-md-2 col-2">
+              <div class="footer_1riril">
+               <span class="bg_oran text-white rounded-circle d-inline-block text-center"><i class="fa fa-phone"></i></span>
+              </div>
+             </div>
+             <div class="col-md-10 col-10">
+              <div class="footer_1ririr">
+               <h6 class="mb-0  lh-base"><a class="col_light" href="tel:+2290141677894">+229 01 41 67 78 94</a><br>
+               <a class="col_light" href="tel:+2290141677895">+229 01 41 67 78 95</a></h6>
+              </div>
+             </div>
+            </div><hr class="hr_1">
+            <div class="footer_1riri row">
+             <div class="col-md-2 col-2">
+              <div class="footer_1riril">
+               <span class="bg_oran text-white rounded-circle d-inline-block text-center"><i class="fa fa-envelope"></i></span>
+              </div>
+             </div>
+             <div class="col-md-10 col-10">
+              <div class="footer_1ririr">
+               <h6 class="mb-0  lh-base"><a class="col_light" href="mailto:contact@lecollege-hevie.bj">contact@lecollege-hevie.bj</a><br>
+               <a class="col_light" href="mailto:direction@lecollege-hevie.bj">direction@lecollege-hevie.bj</a></h6>
+              </div>
+             </div>
+            </div><hr class="hr_1">
+            <div class="footer_1riri row">
+             <div class="col-md-2 col-2">
+              <div class="footer_1riril">
+               <span class="bg_oran text-white rounded-circle d-inline-block text-center"><i class="fa fa-map-marker"></i></span>
+              </div>
+             </div>
+             <div class="col-md-10 col-10">
+              <div class="footer_1ririr">
+               <h6 class="mb-0 col_light lh-base">LE COLLEGE<br>Hêvié, Hêssa Zone CRS<br>Bénin</h6>
+              </div>
+             </div>
+            </div>
+            <div class="mt-3">
+              <a href="https://maps.google.com/?q=Hêvié,Hêssa,Zone CRS,Bénin" class="button btn-sm">Voir sur la carte</a>
+            </div>
+          </div>
+         </div>
+       </div>
+     </div>
+    </section>
 
-<section id="footer_b" class="pt-3 pb-3 bg_oran">
-   <div class="container-xl">
-    <div class="row footer_b1 text-center">
-	 <div class="col-md-12">
-	   <p class="mb-0 text-white">| Design par <a class="text-black fw-bold" href="http://www.templateonweb.com">Aris Florey SEGBO</a></p>
-	 </div>
-	</div>
-   </div>
-  </section>
+    <!-- Footer Bottom -->
+    <section id="footer_b" class="pt-3 pb-3 bg_oran">
+       <div class="container-xl">
+        <div class="row footer_b1 text-center">
+         <div class="col-md-12">
+           <p style="text-align: center;" class="mb-0 text-white"> Développé par <a class="text-black fw-bold" href="">Aris Florey SEGBO</a></p>
+         </div>
+        </div>
+       </div>
+    </section>
+
 
 <script>
 window.onscroll = function() {myFunction()};
@@ -574,5 +826,4 @@ function myFunction() {
 </script>
 
 </body>
-
 </html>
